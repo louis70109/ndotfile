@@ -71,7 +71,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a3be8c,bold,underline"
 ### Zsh Plugins
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -140,10 +140,6 @@ export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 # export PATH="$BREW_PREFIX/bin:$PATH"
 
 
-### Setup z
-. ~/z.sh
-
-
 ### Set up Node.js
 export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -174,3 +170,10 @@ export PATH="$PATH:$HOME/.npm-global/bin"
 export PATH="$PATH:$HOME/.claude/local"
 # To stop Claude getting confused about which directory it should be running commands in
 export CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1
+
+# bun completions
+[ -s "/Users/al03160717/.bun/_bun" ] && source "/Users/al03160717/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

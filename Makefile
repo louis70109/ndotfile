@@ -20,10 +20,11 @@ sync:
 # Install Zsh configuration
 sync-zsh:
 	@echo "🐚 Installing Zsh configuration..."
-	sh $(PWD)/zsh_config.sh
 
-	[ -f ~/.zshrc ] || ln -s $(PWD)/zshrc ~/.zshrc
+	[ -f ~/.zshrc ] || ln -s $(PWD)/.zshrc ~/.zshrc
 	[ -f ~/.p10k.zsh ] || ln -s $(PWD)/p10k.zsh ~/.p10k.zsh
+
+	sh $(PWD)/zsh_config.sh
 	@echo "✅ Zsh configuration installed"
 
 # Install Claude Code configuration
@@ -34,7 +35,7 @@ sync-claude:
 	mkdir -p ~/.claude
 	@echo "  Generating settings.json for $(UNAME_S)..."
 	@sed 's|__SOUND_COMMAND__|$(SOUND_COMMAND)|g' claude_settings.json.template > ~/.claude/settings.json
-	[ -f ~/.claude/CLAUDE.md ] || ln -s $(PWD)/claude_md ~/.claude/CLAUDE.md
+	[ -f ~/.claude/CLAUDE.md ] || ln -s $(PWD)/CLAUDE.md ~/.claude/CLAUDE.md
 	[ -d ~/.claude/commands ] || ln -s $(PWD)/commands ~/.claude/commands
 	[ -d ~/.claude/agents ] || ln -s $(PWD)/agents ~/.claude/agents
 	@echo "✅ Claude Code configuration installed"

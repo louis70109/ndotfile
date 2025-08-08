@@ -107,7 +107,7 @@ alias kz="kustomize"
 alias vl="vksctl"
 alias klc="kubectl config"
 alias apm="appium"
-alias nv="nvim"
+alias vim="nvim"
 
 
 
@@ -168,6 +168,7 @@ export TESTCONTAINERS_RYUK_DISABLED=true
 
 # claude-monitor
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.npm-global/bin"
 
 # claude code
 export PATH="$PATH:$HOME/.claude/local"

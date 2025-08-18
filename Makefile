@@ -27,6 +27,13 @@ sync-zsh:
 	sh $(PWD)/zsh_config.sh
 	@echo "✅ Zsh configuration installed"
 
+# Install Neovim configuration
+sync-neovim:
+	@echo "📝 Installing Neovim configuration..."
+	@command -v stow >/dev/null 2>&1 || { echo "❌ stow is not installed. Please install it first."; exit 1; }
+	stow -t ~ nvim
+	@echo "✅ Neovim configuration installed"
+
 # Install Claude Code configuration
 sync-claude:
 	mkdir "${HOME}/.npm-global"

@@ -142,8 +142,8 @@ export PATH="/opt/nvim-linux-x86_64/bin:$PATH"
 
 ### Set up Node.js
 export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 alias gs="git status"
@@ -157,7 +157,8 @@ alias k="kubectl"
 alias pc="podman compose"
 
 # alias python
-alias python='python3'
+alias python="python3"
+alias pip="pip3"
 
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export TESTCONTAINERS_RYUK_DISABLED=true

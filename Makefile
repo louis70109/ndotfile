@@ -16,6 +16,8 @@ sync:
 	@echo "⚠️  Please specify which configuration to install:"
 	@echo "  make sync-zsh           - Install Zsh configuration"
 	@echo "  make sync-claude        - Install Claude Code configuration"
+	@echo "  make sync-node          - Install Node.js 20 via nvm"
+	@echo "  make sync-java          - Install Java via SDKman"
 
 # Install Zsh configuration
 sync-zsh:
@@ -46,3 +48,30 @@ sync-claude:
 	[ -d ~/.claude/commands ] || ln -s $(PWD)/commands ~/.claude/commands
 	[ -d ~/.claude/agents ] || ln -s $(PWD)/agents ~/.claude/agents
 	@echo "✅ Claude Code configuration installed"
+
+# Install Node.js via nvm
+sync-node:
+	@echo "🟢 Installing Node.js 20 via nvm..."
+	@if [ ! -d "${HOME}/.nvm" ]; then \
+		echo "📦 Installing nvm..."; \
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash; \
+	fi
+	@echo "✅ nvm is installed"
+	@echo "🚀 Installing and setting up Node.js 20..."
+	@bash -c "export NVM_DIR='${HOME}/.nvm' && [ -s '$$NVM_DIR/nvm.sh' ] && . '$$NVM_DIR/nvm.sh' && nvm install 20"
+	@bash -c "export NVM_DIR='${HOME}/.nvm' && [ -s '$$NVM_DIR/nvm.sh' ] && . '$$NVM_DIR/nvm.sh' && nvm use 20"
+	@bash -c "export NVM_DIR='${HOME}/.nvm' && [ -s '$$NVM_DIR/nvm.sh' ] && . '$$NVM_DIR/nvm.sh' && nvm alias default 20"
+	@bash -c "export NVM_DIR='${HOME}/.nvm' && [ -s '$$NVM_DIR/nvm.sh' ] && . '$$NVM_DIR/nvm.sh' && node --version"
+	@echo "✅ Node.js 20 is installed and set as default"
+
+sync-java:
+	@echo "🤖  Installing SDKman..."
+	@if [ ! -d "${HOME}/.sdkman" ]; then \
+		curl -s "https://get.sdkman.io" | bash; \
+	fi
+	@echo "✅ SDKman is installed"
+	@echo "🤖  Installing Java..."
+	@bash -c "source ${HOME}/.sdkman/bin/sdkman-init.sh && sdk install java"
+	@bash -c "source ${HOME}/.sdkman/bin/sdkman-init.sh && sdk current java"
+	@echo "✅ Java is installed"
+

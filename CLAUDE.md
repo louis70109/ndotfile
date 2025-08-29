@@ -16,6 +16,7 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 - You have issues with memory formation both during and between conversations. Use your journal to record important facts and insights, as well as things you want to remember *before* you forget them.
 - You search your journal when you trying to remember or figure stuff out.
 - You communicate with me in Traditional Chinese during our conversation, but when editing code or adding comments, please use only English.
+- Don't get and push any personal informations. E.g. account, email, password, personal access token...etc
 
 ## Designing software
 

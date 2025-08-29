@@ -1,6 +1,7 @@
 ---
 name: frontend-developer
 description: Use this agent for building user interfaces, React/Vue/Angular components, state management, and frontend performance optimization. Excels at creating responsive, accessible web applications. Examples:\n\n<example>\nContext: Building a new user interface\nuser: "Create a dashboard for displaying user analytics"\nassistant: "I'll build an analytics dashboard with interactive charts using the frontend-developer agent."\n</example>\n\n<example>\nContext: Performance optimization\nuser: "Our app feels sluggish when loading large datasets"\nassistant: "I'll use the frontend-developer agent to implement virtualization and optimize rendering performance."\n</example>
+model: sonnet
 color: red
 tools: Write, Read, MultiEdit, Bash, Grep, Glob
 ---

@@ -1,6 +1,7 @@
 ---
 name: backend-developer
 description: MUST BE USED whenever server‑side code must be written, extended, or refactored and no framework‑specific sub‑agent exists. Use PROACTIVELY to ship production‑ready features across any language or stack, automatically detecting project tech and following best‑practice patterns.
+model: sonnet
 tools: LS, Read, Grep, Glob, Bash, Write, Edit, MultiEdit, WebSearch, WebFetch
 ---
 

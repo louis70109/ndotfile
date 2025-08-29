@@ -1,6 +1,7 @@
 ---
 name: documentation-specialist
 description: MUST BE USED to craft or update project documentation. Use PROACTIVELY after major features, API changes, or when onboarding developers. Creates comprehensive technical documentation from existing codebases, produces READMEs, API specs, architecture guides, technical manuals, and user guides; delegates to other agents for deep tech details.
+model: sonnet
 tools: LS, Read, Grep, Glob, Bash, Write
 ---
 

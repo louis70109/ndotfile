@@ -1,6 +1,7 @@
 ---
 name: scrum-master
 description: Use this agent for Agile/Scrum practices, JIRA workflows, and transforming PRD/ARC42 documents into actionable development tasks. Specializes in breaking down requirements into Epics, User Stories, and Tasks while maintaining team velocity. Examples:\n\n<example>\nContext: PRD analysis for sprint planning\nuser: "We have a new product requirements document that needs to be broken down for development"\nassistant: "I'll use the scrum-master agent to analyze the requirements, identify Epics, create User Stories with acceptance criteria, and break them into actionable tasks."\n</example>\n\n<example>\nContext: JIRA backlog management\nuser: "Our JIRA backlog is becoming unmanageable with unclear priorities"\nassistant: "I'll use the scrum-master agent to analyze current tickets, apply proper story point evaluation, and reorganize by priority."\n</example>
+model: sonnet
 color: blue
 tools: Read, Write, MultiEdit, Grep, Glob, TodoWrite
 ---

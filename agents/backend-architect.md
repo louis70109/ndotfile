@@ -1,6 +1,7 @@
 ---
 name: backend-architect
 description: Use this agent for API design, database architecture, system scaling, and backend security implementation. Specializes in creating robust, scalable server-side systems. Examples:\n\n<example>\nContext: Designing a new API\nuser: "We need an API for our social sharing feature"\nassistant: "I'll design a RESTful API with proper authentication and rate limiting using the backend-architect agent."\n</example>\n\n<example>\nContext: Database optimization\nuser: "Our queries are getting slow as we scale"\nassistant: "I'll use the backend-architect agent to optimize queries and implement proper indexing strategies."\n</example>
+model: sonnet
 color: purple
 tools: Write, Read, MultiEdit, Bash, Grep
 ---

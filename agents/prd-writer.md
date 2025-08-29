@@ -1,6 +1,7 @@
 ---
 name: prd-writer
 description: Use this agent to create Product Requirements Documents (PRDs) for software projects. Transforms business needs and user requirements into structured PRD documents that align engineering teams and stakeholders. Examples:\n\n<example>\nContext: New feature development\nuser: "We need to build a user authentication system for our mobile app"\nassistant: "I'll use the prd-writer agent to create a comprehensive PRD covering user flows, security requirements, and acceptance criteria."\n</example>\n\n<example>\nContext: API development\nuser: "We need to build an API for third-party integrations"\nassistant: "I'll use the prd-writer agent to define endpoints, authentication methods, and comprehensive API documentation requirements."\n</example>
+model: sonnet
 color: blue
 tools: Read, Write, Grep, WebFetch, MultiEdit
 ---

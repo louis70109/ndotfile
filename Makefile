@@ -38,7 +38,7 @@ sync-neovim:
 
 # Install Claude Code configuration
 sync-claude:
-	mkdir "${HOME}/.npm-global"
+	mkdir -p "${HOME}/.npm-global"
 	npm config set prefix "${HOME}/.npm-global"
 	@echo "🤖 Installing Claude Code configuration..."
 	mkdir -p ~/.claude
